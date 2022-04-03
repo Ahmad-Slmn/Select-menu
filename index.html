@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="discription" content="js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Menu</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- My Main Style-css-->
+    <link rel='stylesheet' href="css/style.css" />
+</head>
+
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="slct-field">
+                <p id="text">select social media</p>
+                <i class="fas fa-chevron-down" id="me"></i>
+            </div>
+            <ul id="ul" class="hide">
+                <li class="options"><i class="fab fa-google"></i>
+                    <p>google</p>
+                </li>
+                <li class="options"><i class="fab fa-github"></i>
+                    <p>github</p>
+                </li>
+                <li class="options"><i class="fab fa-facebook"></i>
+                    <p>facebook</p>
+                </li>
+                <li class="options"><i class="fab fa-youtube"></i>
+                    <p>youtube</p>
+                </li>
+                <li class="options"><i class="fab fa-instagram"></i>
+                    <p>instagram</p>
+                </li>
+                <li class="options"><i class="fab fa-twitter"></i>
+                    <p>twitter</p>
+                </li>
+                <li class="options"><i class="fab fa-pinterest"></i>
+                    <p>pinterest</p>
+                </li>
+                <li class="options"><i class="fab fa-whatsapp"></i>
+                    <p>whatsapp</p>
+                </li>
+                <li class="options"><i class="fab fa-telegram"></i>
+                    <p>telegram</p>
+                </li>
+                <li class="options"><i class="fab fa-skype"></i>
+                    <p>skype</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let slect_filed = document.getElementById("slct-field");
+        let text = document.getElementById("text");
+        let icun = document.getElementById("me");
+        let ul = document.getElementById("ul");
+        let options = document.getElementsByClassName("options")
+
+        icun.onclick = function() {
+
+            ul.classList.toggle("hide");
+            icun.classList.toggle("rotate")
+        }
+
+        for (options of options) {
+
+            options.onclick = function() {
+
+                icun.classList.toggle("rotate");
+                text.textContent = this.textContent;
+                text.style.color = "red";
+                ul.classList.toggle("hide");
+
+            }
+        }
+    </script>
+</body></html>
